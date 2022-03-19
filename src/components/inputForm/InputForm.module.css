@@ -1,0 +1,36 @@
+.input_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_group input:not([type="submit"]) {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    background: transparent;
+    border-bottom: 0.2rem solid #2AAC5E;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    transition: border-bottom 0.4s;
+}
+
+.input_group input[type="submit"] {
+    padding: 0.7rem;
+    border: none;
+    outline: none;
+    border-radius: 0.7rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #2AAC5E;
+}
+
+.input_group input[type="submit"]:active {
+    transform: translateY(0.5rem);
+}
+
+.input_group input[type="submit"]:hover {
+    opacity: 0.9;
+}

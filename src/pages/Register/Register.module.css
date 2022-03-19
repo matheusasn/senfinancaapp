@@ -1,0 +1,40 @@
+.card_register{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.body_card_input{
+    border: 0.1rem solid #2AAC5E;
+}
+
+.body_card_output{
+    border: 0.1rem solid #ff716e;
+}
+
+.title_card_register_input{
+    font-size: 2rem;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center;
+    color: #2AAC5E;
+}
+
+.title_card_register_output{
+    font-size: 2rem;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center;
+    color: #ff716e;
+}
+
+
+.section_output{
+    padding: 1rem;
+}
+
+.section_input{
+    padding: 1rem;
+}

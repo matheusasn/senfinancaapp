@@ -1,0 +1,29 @@
+.footer{
+    background-color: #FFBF00;
+    color: #fff;
+    padding: 1em 2em 2.5em 2em;
+    font-weight: 200;
+    font-size: small;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    max-height: 25px;
+    
+    position: sticky;
+    bottom: 0;
+
+}
+
+.body_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_midia a{
+    margin-left: 10px;
+}
+
+.img_social_midia{
+    width: 24px;
+}

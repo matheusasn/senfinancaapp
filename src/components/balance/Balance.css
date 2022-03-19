@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+main.cards {
+  display: flex;
+  padding: 32px;
+}
+
+main.cards section.card {
+  display: flex;
+  background: white;
+  padding: 0rem 1.5rem;
+  border-radius: 10px;
+  max-height: 468px;
+  margin-left: 32px;
+}
+
+.body_card{
+  padding: 1rem;
+}
+
+.title_card{
+  width: 223px;
+  height: 36px;
+  left: 86px;
+  top: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #6C6C6C;
+}
+
+.value_card{
+  padding: 10px;
+}
+
+.value_card p{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+main.cards section.card h3 {
+  font-size: 1.5em;
+  color:rgb(65, 65, 65);
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.amount span {
+  color: #2AAC5E;
+}
+
+.amount h3 {
+  color: #2AAC5E;
+}
+
+.amount p {
+  color: #2AAC5E;
+}
+
+.input span {
+  color: #3A9CD9
+}
+
+.input h3 {
+  color: #3A9CD9
+}
+
+.input p {
+  color: #3A9CD9
+}
+
+.output span {
+  color: #E44E4E
+}
+
+.output h3 {
+  color: #E44E4E
+}
+
+.output p {
+  color: #E44E4E
+}
+
+main.cards section.card.amount {
+  box-shadow: 20px 20px 50px -30px #696969;
+}
+
+main.cards section.card.input {
+  box-shadow: 20px 20px 50px -30px #696969;
+}
+main.cards section.card.output {
+  box-shadow: 20px 20px 50px -30px #696969;
+}
+
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-direction: column;
+  }
+
+  main.cards section.card {
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+
+  main.cards section.card button {
+      font-size: 70%;
+  }
+
+}

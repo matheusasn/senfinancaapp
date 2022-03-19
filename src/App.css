@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body, #root {
+  background-color: #EFEFEF;
+  height: 100%;
+  font-weight: 600;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+html::-webkit-scrollbar{
+  width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+html {
+  scrollbar-width: none; /* For FireFox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}

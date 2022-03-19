@@ -1,0 +1,32 @@
+.navbar{
+    background: #FFBF00 !important;
+}
+
+.title_navbar{
+    font-size: 24px;
+    padding: 1.2rem 0 1.2rem 0;
+    text-decoration: 'none';
+}
+
+.route_navbar{
+    font-size: 20px;
+}
+
+.item a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.item a:hover{
+    color: #949494;
+}
+
+.style_button_register{
+    font-size: 22px;
+}
+
+.container_navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between !important;
+}

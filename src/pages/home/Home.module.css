@@ -1,0 +1,15 @@
+.body_page_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.8rem;
+    padding-bottom: 3rem;
+}
+
+.body_card_Balance{
+    background-color: #001e3c !important;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
