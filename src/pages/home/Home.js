@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Home.module.css';
 import Balance from '../../components/balance/Balance';
 import IncomeList from '../../components/IncomeList';
-import ExpenseList from '../../components/ExpenseList'
 
 function Home(){
   return (
@@ -13,9 +12,6 @@ function Home(){
         </section>
         <section>
           <IncomeList/>
-        </section>
-        <section>
-          <ExpenseList/>
         </section>
       </div>   
     </>
