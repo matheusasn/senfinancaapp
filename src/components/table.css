@@ -10,6 +10,10 @@
     border-radius: 9px;
 }
 
+.section_title_table_register{
+    display: flex;
+    flex-direction: column;
+}
 .div_table_input h2{
     color: rgb(65 65 65);
     padding: 0.5em;
@@ -109,8 +113,6 @@
 
 .div_type_register{
     display: flex;
-    margin-left: 10px;
-    margin-top: 35px;
 }
 
 .tag_output{
@@ -167,4 +169,64 @@
 
 .button_register_table:active{
     transform: translateY(4px);
+}
+
+@media(max-width: 1000px){
+    #customers td, #customers th {
+        padding: 4px !important;
+        font-size: 12px !important;
+    }
+
+    .div_table_output{
+        padding: 0.7em !important;
+    }
+    
+    .section_title_table_register {
+        font-size: 12px;
+    }
+
+    .section_type_register {
+        font-size: 9px;
+    }
+
+    .tag_output {
+        width: 8px;
+        height: 8px;
+        margin-right: 3px;
+    }
+
+    .tag_input {
+        width: 8px;
+        height: 8px;
+        margin-right: 3px;
+    }
+
+    .section_select_filter_input_output {
+        margin-left: 2px;
+    }
+
+    .style_select_table{
+        width: 80%;
+    }
+
+    #search{
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .div_button_register_table {
+        padding-left: 2px;
+    }
+
+    .button_register_table {
+        width: 80px;
+    }
+
+    .button_register_table p {
+        font-size: 12px;
+    }
+
+    .div_table_input h2 {
+        padding-top: 1em;
+    }
 }

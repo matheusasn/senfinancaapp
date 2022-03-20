@@ -2,12 +2,6 @@
     background: #FFBF00 !important;
 }
 
-.title_navbar{
-    font-size: 24px;
-    padding: 1.2rem 0 1.2rem 0;
-    text-decoration: 'none';
-}
-
 .route_navbar{
     font-size: 20px;
 }
@@ -29,4 +23,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between !important;
+}
+
+@media(max-width: 500px){
+    h1{
+        font-size: 26px !important;
+    }
+
+    .img_social_midia{
+        width: 26px;
+    }
 }

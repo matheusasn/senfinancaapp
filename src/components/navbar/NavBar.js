@@ -25,7 +25,7 @@ function NavBar(){
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <div className={styles.item}>
                 <NavLink className={({isActive}) => (isActive ? styles.active : '')} to='/'>
-                  <h1 alt='SenFinaça'>SenFinança</h1>            
+                  <h1 alt='SenFinaça' className="title_navbar">SenFinança</h1>            
                 </NavLink>
               </div>
           </Typography>

@@ -47,31 +47,36 @@ const IncomeList = () => {
   return (
     <div className="div_table_input">
       <div className="title_table_input">
-        <div className="div_type_register">
-          <section className="section_type_register">
-            <div>
-              <div className="tag_output"/>
-            </div>
-            <div>
-              <p>Entrada</p>
-            </div>
-          </section>
-          <section className="section_type_register">
-            <div>
-              <div className="tag_input"/>
-            </div>
-            <div>
-              <p>Saida</p>
-            </div>
-          </section>
-          <section className="section_select_filter_input_output">
-            <select name="select">
-              <option value="default" selected></option>
-              <option value="filterInput">Entrada</option>
-              <option value="filterOutput">Saida</option>
-            </select>
-          </section>
-        </div>
+        <section className="section_title_table_register">
+          <div>
+            <h2>Registro</h2>
+          </div>
+          <div className="div_type_register">
+            <section className="section_type_register">
+              <div>
+                <div className="tag_output"/>
+              </div>
+              <div>
+                <p>Entrada</p>
+              </div>
+            </section>
+            <section className="section_type_register">
+              <div>
+                <div className="tag_input"/>
+              </div>
+              <div>
+                <p>Saida</p>
+              </div>
+            </section>
+            <section className="section_select_filter_input_output">
+              <select name="select" className="style_select_table">
+                <option value="default" selected></option>
+                <option value="filterInput">Entrada</option>
+                <option value="filterOutput">Saida</option>
+              </select>
+            </section>
+          </div>
+        </section>
         <div className="navbar_table">
           <div>
             <input type="text" id="search" name="searchTable" value={searchTable} placeholder="Pesquisar" autoComplete="off" onChange={onChangeIncome}/>
