@@ -30,7 +30,7 @@ const Balance = () => {
               <h3>Entrada</h3>
             </div>
             <div className="value_card">
-              <p>R$<span>{totalIncome}</span></p>
+              <p className="value_card_p">R$</p><span>{totalIncome}</span>
             </div>   
           </div> 
         </section>
@@ -41,7 +41,7 @@ const Balance = () => {
               <h3>Saída</h3>
             </div>
             <div className="value_card">
-              <p>R$<span>{totalExpenses}</span></p>
+              <p className="value_card_p">R$</p><span>{totalExpenses}</span>
             </div>   
           </div> 
         </section>
@@ -52,7 +52,7 @@ const Balance = () => {
               <h3>Saldo</h3>
             </div>
             <div className="value_card">
-              <p>R$<span>{(totalIncome - totalExpenses).toFixed(2)}</span></p>
+              <p className="value_card_p">R$</p><span>{(totalIncome - totalExpenses).toFixed(2)}</span>
             </div>  
           </div> 
         </section>

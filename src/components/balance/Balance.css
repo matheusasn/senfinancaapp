@@ -35,13 +35,15 @@ main.cards section.card {
 
 .value_card{
   padding: 10px;
+  display: flex
 }
 
 .value_card p{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 29px;
+  font-size: 25px;
+  margin-top: 12px;
 }
 
 main.cards section.card:first-child {
@@ -54,9 +56,10 @@ main.cards section.card h3 {
 }
 
 main.cards section.card span {
-  font-weight: 300;
+  font-family: 'Roboto';
+  font-weight: 700;
   max-width: 240px;
-  font-size: 1.5em;
+  font-size: 2.5em;
   margin-bottom: 16px;
 }
 
@@ -123,6 +126,34 @@ main.cards section.card.output {
 
   main.cards section.card button {
       font-size: 70%;
+  }
+
+  .title_card{
+    font-size: 1em;
+  }
+
+  .body_card {
+    padding: 0.5rem;
+  }
+
+  .value_card {
+    padding: 0px;
+  }
+
+  main.cards {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  main.cards section.card span {
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+  .value_card_p{
+    margin-top: 15px;
+    font-size: 1em !important;
+    margin-left: 40px;
   }
 
 }
