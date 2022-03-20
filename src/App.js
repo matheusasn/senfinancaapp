@@ -4,8 +4,8 @@ import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
+import EditRegister from "./pages/Register/edit"
 import RegisterInput from "./pages/Register/RegisterInput";
-import RegisterOutput from "./pages/Register/RegisterOutput";
 import Container from './components/layout/Container'
 import "./App.css"
 
@@ -19,7 +19,7 @@ const App = () => {
               <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route exact path="/formEntrada" element={<RegisterInput/>} />
-                <Route exact path="/formSaida" element={<RegisterOutput/>} />
+                <Route exact path="/formEntrada/:id" element={<EditRegister/>} />
               </Routes>
             </Container>
             <Footer/>

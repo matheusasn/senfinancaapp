@@ -3,9 +3,7 @@ import AppReducer from "./AppReducer";
 
 const initialState = {
   incomeTransactions:
-    JSON.parse(localStorage.getItem("incomeTransactions")) || [],
-  expenseTransactions:
-    JSON.parse(localStorage.getItem("expenseTransactions")) || []
+    JSON.parse(localStorage.getItem("incomeTransactions")) || []
 };
 
 export const GlobalContext = createContext(initialState);
@@ -18,10 +16,6 @@ export const GlobalContextProvider = ({ children }) => {
       "incomeTransactions",
       JSON.stringify(state.incomeTransactions)
     );
-    localStorage.setItem(
-      "expenseTransactions",
-      JSON.stringify(state.expenseTransactions)
-    );
 
   });
 
@@ -32,10 +26,10 @@ export const GlobalContextProvider = ({ children }) => {
     });
   };
 
-  const editTransaction = id => {
+  const editTransaction = register => {
     dispatch({
-      type: "DELETE_TRANSACTION",
-      payload: id
+      type: "EDIT_TRANSACTION",
+      payload: register      
     });
   };
 
@@ -53,22 +47,13 @@ export const GlobalContextProvider = ({ children }) => {
     });
   };
 
-  const addExpense = expenseTransaction => {
-    dispatch({
-      type: "ADD_EXPENSE",
-      payload: expenseTransaction
-    });
-  };
-
   return (
     <GlobalContext.Provider
       value={{
         incomeTransactions: state.incomeTransactions,
-        expenseTransactions: state.expenseTransactions, 
         editTransaction,
         deleteTransaction,
-        addIncome,
-        addExpense
+        addIncome
       }}
     >
       {children}

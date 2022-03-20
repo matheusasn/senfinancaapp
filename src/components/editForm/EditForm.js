@@ -1,51 +1,60 @@
-import React, { useState, useContext } from "react";
-import { v4 as uuidv4 } from "uuid";
+import React, { useState, useContext, useEffect } from "react";
+// import { v4 as uuidv4 } from "uuid";
 import { GlobalContext } from "../../context/GlobalState";
 import { NavLink } from 'react-router-dom'
-import styles from './InputForm.module.css'
+
+import styles from './EditForm.module.css'
 
 
-function InputForm(){
-  const { addIncome } = useContext(GlobalContext);
+function InputForm(props){
+
+  const { editTransaction } = useContext(GlobalContext);
 
   const [income, setIncome] = useState({
     inputTitle: "",
-    inputType: "",
     inputCategory: "",
+    inputType: "",
     inputValue: 0,
   });
 
-  const { inputTitle, inputCategory, inputType, inputValue, } = income;
+  const { inputTitle, inputCategory, inputType, inputValue } = income;
 
   const onChangeIncome = (e) => {
-    console.log("AQUI",e.target.value)
     setIncome({ ...income, [e.target.name]: e.target.value });
   };
+
+  useEffect(() => {
+    const registers = JSON.parse(localStorage.getItem("incomeTransactions")) || []
+
+    const register = registers.find( (reg) => {
+      return reg.id === props.idRegister;
+    });
+
+    setIncome({
+      inputTitle: register.inputTitle,
+      inputCategory: register.inputCategory,
+      inputType: register.inputType,
+      inputValue: register.inputValue,
+    });
+
+  }, []);
 
   const onSubmitIncome = (e) => {
     e.preventDefault();
 
     if (inputTitle !== "") {
       const newIncomeTransaction = {
-        id: uuidv4(),
-        inputTitle,
-        inputCategory,
-        inputType,
-        inputValue: inputValue * 1,
+        id: props.idRegister,
+        ...income
       };
 
-      addIncome(newIncomeTransaction);
-
-      setIncome({
-        inputTitle: "",
-        inputCategory: "",
-        inputType: "",
-        inputValue: 0,
-      });
+      editTransaction(newIncomeTransaction);
+      
     }
   };
 
   return (
+
     <form onSubmit={onSubmitIncome}>
       <div className={styles.input_group}>
 
@@ -53,10 +62,10 @@ function InputForm(){
 
       <div className={styles.div_radio_type}>
         <div className={styles.div_option_input}>
-          <input type="radio" name="inputType" value="input" autoComplete="off" onChange={onChangeIncome}/> Entrada
+          <input type="radio" name="inputType" value="input" autoComplete="off" checked={inputType === "input"} onChange={onChangeIncome}/> Entrada
         </div>
         <div className={styles.div_option_output}>
-        <input type="radio" name="inputType" value="output" autoComplete="off" onChange={onChangeIncome}/> Saida
+        <input type="radio" name="inputType" value="output" autoComplete="off" checked={inputType === "output"} onChange={onChangeIncome}/> Saida
         </div>
       </div>
       
@@ -66,7 +75,7 @@ function InputForm(){
 
       <div className={styles.option_form_register}>
         <div className={styles.option_form_submit}>
-          <input type="submit" value="Cadastrar"/>
+          <input type="submit" value={"Editar"}/>
         </div>        
         <div className={styles.option_form_exit}>
           <NavLink className={({isActive}) => (isActive ? styles.active : '')} to='/'>            

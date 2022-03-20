@@ -24,8 +24,6 @@ const IncomeList = () => {
   };
 
   const { searchTable } = valueSearch;
-
-  console.log(searchTable)
   
   // const onSubmitSearch = (e) =>{
   //   // e.preventDefault();

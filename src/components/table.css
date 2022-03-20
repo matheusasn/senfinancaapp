@@ -248,10 +248,17 @@
     display: flex;
 }
 
-.type_input_output{
+.type_input_input{
     width: 4px;
     height: 30px;
     background: #2AAC5E;
+    border-radius: 2px;
+}
+
+.type_input_output{
+    width: 4px;
+    height: 30px;
+    background: #E44E4E;
     border-radius: 2px;
 }
 
