@@ -9,7 +9,7 @@ const IncomeTransaction = ({ incomeTransaction }) => {
   return (
     <tr className="tr_table">
       <td>
-        <span className="transaction-text">{incomeTransaction.inputTitle}</span>
+        <span className="transaction-text">{incomeTransaction.inputType}</span>
       </td>
       <td>
         <span className="transaction-text">{incomeTransaction.inputCategory}</span>
@@ -22,13 +22,17 @@ const IncomeTransaction = ({ incomeTransaction }) => {
       <td>
         <span>{today.toLocaleDateString()}</span>
       </td>
-      <td>
-        <button
-          onClick={() => deleteTransaction(incomeTransaction.id)}
-          className="delete-btn"
-        >
-          <i className="fas fa-trash"></i>
-        </button>
+      <td className="display_button_table">
+        <div>
+          <button onClick={() => deleteTransaction(incomeTransaction.id)} className="delete-btn">
+            <img className="icon_width_table" alt="Edit" src={require('../assets/icons/edit.png')}/>  
+          </button>
+        </div>
+        <div>
+          <button onClick={() => deleteTransaction(incomeTransaction.id)} className="delete-btn">
+            <img className="icon_width_table" alt="Deletar" src={require('../assets/icons/delete.png')}/>  
+          </button>
+        </div>
       </td>
     </tr>
   );

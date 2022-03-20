@@ -22,6 +22,7 @@ export const GlobalContextProvider = ({ children }) => {
       "expenseTransactions",
       JSON.stringify(state.expenseTransactions)
     );
+
   });
 
   const deleteTransaction = id => {
@@ -37,6 +38,13 @@ export const GlobalContextProvider = ({ children }) => {
       payload: id
     });
   };
+
+  // const SearchTrasactionTable = valueSearchTrasactionTable => {
+  //   dispatch({
+  //     type: "SEARCH_VALUE",
+  //     payload: valueSearchTrasactionTable
+  //   });
+  // } 
 
   const addIncome = incomeTransaction => {
     dispatch({
@@ -56,7 +64,7 @@ export const GlobalContextProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         incomeTransactions: state.incomeTransactions,
-        expenseTransactions: state.expenseTransactions,
+        expenseTransactions: state.expenseTransactions, 
         editTransaction,
         deleteTransaction,
         addIncome,

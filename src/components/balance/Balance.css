@@ -97,14 +97,14 @@ main.cards section.card span {
 }
 
 main.cards section.card.amount {
-  box-shadow: 20px 20px 50px -30px #696969;
+  box-shadow: 1px 3px 5px rgb(0 0 0 / 10%);
 }
 
 main.cards section.card.input {
-  box-shadow: 20px 20px 50px -30px #696969;
+  box-shadow: 1px 3px 5px rgb(0 0 0 / 10%);
 }
 main.cards section.card.output {
-  box-shadow: 20px 20px 50px -30px #696969;
+  box-shadow: 1px 3px 5px rgb(0 0 0 / 10%);
 }
 
 @media screen and (max-width: 720px) {

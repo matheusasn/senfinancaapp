@@ -12,7 +12,9 @@ function InputForm(){
     inputValue: 0,
   });
 
-  const { inputTitle, inputCategory, inputValue, } = income;
+  console.log(income)
+
+  const { inputTitle, inputCategory, inputType, inputValue, } = income;
 
   const onChangeIncome = (e) => {
     setIncome({ ...income, [e.target.name]: e.target.value });
@@ -26,6 +28,7 @@ function InputForm(){
         id: uuidv4(),
         inputTitle,
         inputCategory,
+        inputType,
         inputValue: inputValue * 1,
       };
 
@@ -34,6 +37,7 @@ function InputForm(){
       setIncome({
         inputTitle: "",
         inputCategory: "",
+        inputType: "",
         inputValue: 0,
       });
     }
@@ -46,7 +50,14 @@ function InputForm(){
       
       <input type="text" name="inputCategory" value={inputCategory} placeholder="Categoria" autoComplete="off" onChange={onChangeIncome}/>
 
-      <input type="number" name="inputValue" value={inputValue} placeholder="Valor" autoComplete="off" onChange={onChangeIncome}/>
+      <div>
+        <input type="radio" name="inputType" value={inputType} autoComplete="off" onChange={onChangeIncome}/> Entrada
+      
+        <input type="radio" name="inputType" value={inputType} autoComplete="off" onChange={onChangeIncome}/> Saida
+      </div>
+
+
+
 
       <input type="submit" value="Submit"/>
       </div>
