@@ -7,11 +7,7 @@
 }
 
 .body_card_input{
-    border: 0.1rem solid #2AAC5E;
-}
-
-.body_card_output{
-    border: 0.1rem solid #ff716e;
+    border: 0.1rem solid #FFBF00;
 }
 
 .title_card_register_input{
@@ -19,17 +15,9 @@
     font-weight: 600 !important;
     display: flex;
     justify-content: center;
-    color: #2AAC5E;
+    color: #FFBF00;
+    margin-bottom: 10px !important;
 }
-
-.title_card_register_output{
-    font-size: 2rem;
-    font-weight: 600 !important;
-    display: flex;
-    justify-content: center;
-    color: #ff716e;
-}
-
 
 .section_output{
     padding: 1rem;

@@ -1,7 +1,9 @@
 import React, { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { GlobalContext } from "../../context/GlobalState";
+import { NavLink } from 'react-router-dom'
 import styles from './InputForm.module.css'
+
 
 function InputForm(){
   const { addIncome } = useContext(GlobalContext);
@@ -46,20 +48,32 @@ function InputForm(){
   return (
     <form onSubmit={onSubmitIncome}>
       <div className={styles.input_group}>
+
       <input type="text" name="inputTitle" value={inputTitle} placeholder="Título" autoComplete="off" onChange={onChangeIncome}/>
+
+      <div className={styles.div_radio_type}>
+        <div className={styles.div_option_input}>
+          <input type="radio" name="inputType" value={inputType} autoComplete="off" onChange={onChangeIncome}/> Entrada
+        </div>
+        <div className={styles.div_option_output}>
+        <input type="radio" name="inputType" value={inputType} autoComplete="off" onChange={onChangeIncome}/> Saida
+        </div>
+      </div>
       
       <input type="text" name="inputCategory" value={inputCategory} placeholder="Categoria" autoComplete="off" onChange={onChangeIncome}/>
 
-      <div>
-        <input type="radio" name="inputType" value={inputType} autoComplete="off" onChange={onChangeIncome}/> Entrada
-      
-        <input type="radio" name="inputType" value={inputType} autoComplete="off" onChange={onChangeIncome}/> Saida
+      <input type="number" name="inputValue" value={inputValue} autoComplete="off" onChange={onChangeIncome}/>
+
+      <div className={styles.option_form_register}>
+        <div className={styles.option_form_submit}>
+          <input type="submit" value="Cadastrar"/>
+        </div>        
+        <div className={styles.option_form_exit}>
+          <NavLink className={({isActive}) => (isActive ? styles.active : '')} to='/'>            
+            <input type="submit" value="Cancelar"/>
+          </NavLink>
+        </div>
       </div>
-
-
-
-
-      <input type="submit" value="Submit"/>
       </div>
   </form>
   );

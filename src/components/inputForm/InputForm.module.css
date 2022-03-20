@@ -5,10 +5,10 @@
 
 .input_group input:not([type="submit"]) {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border: none;
     background: transparent;
-    border-bottom: 0.2rem solid #2AAC5E;
+    border-bottom: 0.2rem solid #FFBF00;
     padding: 0.5rem 0.5rem 0.5rem 0;
     font-size: 24px;
     color: rgb(0, 0, 0);
@@ -24,7 +24,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     color: #ffffff;
-    background-color: #2AAC5E;
+    background-color: #FFBF00;
 }
 
 .input_group input[type="submit"]:active {
@@ -33,4 +33,31 @@
 
 .input_group input[type="submit"]:hover {
     opacity: 0.9;
+}
+
+.option_form_register{
+    display: flex;
+    justify-content: center;
+}
+
+.option_form_submit{
+    padding: 3px;
+}
+
+.option_form_exit{
+    padding: 3px;
+}
+
+.div_radio_type{
+    display: flex;
+    justify-content: center;
+}
+
+.div_option_input{
+    margin-right: 25%;
+    font-size: 20px;
+}
+
+.div_option_output{
+    font-size: 20px;
 }

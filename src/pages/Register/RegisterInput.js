@@ -12,7 +12,7 @@ function RegisterInput(){
         <Card xl className={styles.body_card_input}>
           <CardContent>
             <Typography variant="h5" component="div" className={styles.title_card_register_input}>
-              Cadastrar Entrada
+              Cadastrar Finanças
             </Typography>
             <Typography variant="body2">
               <ul>

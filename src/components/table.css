@@ -27,7 +27,6 @@
 }
 
 #customers td, #customers th {
-    border: 1px solid #ddd;
     padding: 8px;
     color: black;
     text-align: center;    
@@ -44,7 +43,7 @@
 }
 
 .custonInput{
-    background-color: #ffbf00;
+    background-color: #ccc;
 }
 
 #customers th {
@@ -91,7 +90,7 @@
 #search{
     width: 145px;
     height: 24px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     padding: 1px 0 0 16px;
     font-size: 15px;
     color: black;
@@ -171,6 +170,10 @@
     transform: translateY(4px);
 }
 
+.delete-btn{
+    padding: 3px;
+}
+
 @media(max-width: 1000px){
     #customers td, #customers th {
         padding: 4px !important;
@@ -229,4 +232,28 @@
     .div_table_input h2 {
         padding-top: 1em;
     }
+
+    .icon_width_table{
+        width: 20px;
+    }
+
+}
+
+.display_box_td_type{
+    display: flex;
+}
+
+.type_input_output{
+    width: 4px;
+    height: 30px;
+    background: #2AAC5E;
+    border-radius: 2px;
+}
+
+.margin_right_type{
+    margin-right: 6px;
+}
+
+.type_input_title{
+    margin-top: 10px;
 }
