@@ -6,10 +6,18 @@ const Balance = () => {
   const { incomeTransactions } = useContext(GlobalContext);
 
   const incomeAmounts = incomeTransactions.map(
-    incomeTransaction => incomeTransaction.inputValue
+    incomeTransaction => incomeTransaction.inputType === "input"? incomeTransaction.inputValue : null
   );
 
   const totalIncome = incomeAmounts
+    .reduce((acc, item) => (acc += item), 0)
+    .toFixed(2);
+
+  const exitValue = incomeTransactions.map(
+    incomeTransaction => incomeTransaction.inputType === "output"? incomeTransaction.inputValue : null
+  );
+  
+  const totalExit = exitValue
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
 
@@ -33,7 +41,7 @@ const Balance = () => {
               <h3>Saída</h3>
             </div>
             <div className="value_card">
-              <p className="value_card_p">R$</p><span>{totalIncome}</span>
+              <p className="value_card_p">R$</p><span>{totalExit}</span>
             </div>  
           </div> 
         </section>
@@ -44,7 +52,7 @@ const Balance = () => {
               <h3>Saldo</h3>
             </div>
             <div className="value_card">
-              <p className="value_card_p">R$</p><span>{"123"}</span>
+              <p className="value_card_p">R$</p><span>{totalIncome - totalExit}</span>
             </div>  
           </div> 
         </section>
