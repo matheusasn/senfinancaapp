@@ -12,7 +12,7 @@ const ExpenseList = () => {
     <div className="div_table_output">
       <div className="title_table_input custonOutput">
         <div>
-          <h2>Tablema de Saída</h2>
+          <h2>Saída</h2>
         </div>
         <div className={styles.item}>
           <NavLink  className={({isActive}) => (isActive ? styles.active : '')} to='/formSaida' >

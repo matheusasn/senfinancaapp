@@ -7,7 +7,7 @@ const IncomeTransaction = ({ incomeTransaction }) => {
   var today = new Date(timeElapsed);
 
   return (
-    <tr>
+    <tr className="tr_table">
       <td>
         <span className="transaction-text">{incomeTransaction.inputTitle}</span>
       </td>

@@ -12,9 +12,7 @@
 
 .div_table_input h2{
     color: rgb(65 65 65);
-    background-color: #2AAC5E;
     padding: 0.5em;
-    border-radius: 9px;
 }
 
 #customers {
@@ -31,9 +29,9 @@
     text-align: center;    
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers .tr_table:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {
+#customers .tr_table:hover {
     background-color: #ddd;
 }
 
@@ -42,7 +40,7 @@
 }
 
 .custonInput{
-    background-color: #2AAC5E;
+    background-color: #ffbf00;
 }
 
 #customers th {
@@ -72,5 +70,15 @@
     color: rgb(65 65 65);
     padding: 0.5em;
     border-radius: 9px;
+    border: 1px solid #ccc!important;
+    box-shadow: -30px 10px 50px -30px #000000;
 }
 
+.navbar_table{
+    display: flex;
+    margin-right: 10px;
+}
+
+.button_register_table{
+    padding: 10px;
+}

@@ -49,7 +49,7 @@ const Balance = () => {
         <section className="card input">
           <div className="body_card">
             <div className="title_card">
-              <h3>Total</h3>
+              <h3>Saldo</h3>
             </div>
             <div className="value_card">
               <p>R$<span>{(totalIncome - totalExpenses).toFixed(2)}</span></p>
