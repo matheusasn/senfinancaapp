@@ -53,7 +53,7 @@ const Balance = () => {
               <h3>Saldo</h3>
             </div>
             <div className="value_card">
-              <p className="value_card_p">R$</p><span>{totalBalance }</span>
+              <p className="value_card_p">R$</p><span>{totalBalance}</span>
             </div>  
           </div> 
         </section>

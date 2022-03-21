@@ -22,13 +22,12 @@ const IncomeList = () => {
   const { searchTable, select } = valueSearch;
   
   // retorna o tipo de tabela all, entrada ou saida
-  const filterTable = valueSearch.select === "" || valueSearch.select === 'all'? 
+  const filterTable = valueSearch.select === "" || valueSearch.select === 'all' && typeof valueSearch.select === String? 
   incomeTransactions 
   : incomeTransactions.filter(incomeTransactions => incomeTransactions.inputType === valueSearch.select);
 
-  console.log(incomeTransactions)
   // filtra tabela pelo campo pesquisar
-  const typeTable = valueSearch.searchTable != "" ? 
+  const typeTable = valueSearch.searchTable != "" && typeof valueSearch.select === String ? 
   filterTable.filter(filterTable => filterTable.inputTitle.includes(valueSearch.searchTable) 
     || filterTable.inputCategory.includes(valueSearch.searchTable)
     || filterTable.date.includes(valueSearch.searchTable)
