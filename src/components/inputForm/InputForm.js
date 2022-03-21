@@ -55,7 +55,7 @@ function InputForm(){
           <input type="radio" name="inputType" value="input" autoComplete="off" onChange={onChangeIncome}/> Entrada
         </div>
         <div className={styles.div_option_output}>
-        <input type="radio" name="outputType" value="output" autoComplete="off" onChange={onChangeIncome}/> Saida
+          <input type="radio" name="inputType" value="output" autoComplete="off" onChange={onChangeIncome}/> Saida
         </div>
       </div>
       

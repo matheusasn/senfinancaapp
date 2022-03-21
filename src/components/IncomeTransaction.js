@@ -6,7 +6,7 @@ const IncomeTransaction = ({ incomeTransaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
   var timeElapsed = Date.now();
   var today = new Date(timeElapsed);
-
+  
   return (
     <tr className="tr_table">
       <td className="display_box_td_type">
