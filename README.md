@@ -1,4 +1,4 @@
-Bug na tela de cadastro removido, subindo depois da avaliação da SenseData.
+Subir nova versão depois da avaliação da SenseData, prazo de entrega finalizado
 
 Senfinanca: http://senfinanca-app.herokuapp.com/
 
