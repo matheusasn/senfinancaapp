@@ -13,9 +13,9 @@ const IncomeTransaction = ({ incomeTransaction }) => {
         <div className="margin_right_type">
           <div className={"type_input_"+incomeTransaction.inputType}></div>
         </div>
-        <dic className="type_input_title">
+        <div className="type_input_title">
           <span className="transaction-text">{incomeTransaction.inputTitle}</span>
-        </dic>
+        </div>
       </td>
       <td>
         <span className="transaction-text">{incomeTransaction.inputCategory}</span>

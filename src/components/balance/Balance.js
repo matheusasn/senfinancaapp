@@ -10,7 +10,7 @@ const Balance = () => {
   );
 
   const totalIncome = incomeAmounts
-    .reduce((acc, item) => (acc += item), 0)
+    .reduce((acc, item) => (acc += Number(item)), 0)
     .toFixed(2);
 
   const exitValue = incomeTransactions.map(
@@ -18,9 +18,10 @@ const Balance = () => {
   );
   
   const totalExit = exitValue
-    .reduce((acc, item) => (acc += item), 0)
+    .reduce((acc, item) => (acc += Number(item)), 0)
     .toFixed(2);
 
+  const totalBalance = (totalIncome - totalExit).toFixed(2);
   return (
     <div>
       <main className="cards">
@@ -52,7 +53,7 @@ const Balance = () => {
               <h3>Saldo</h3>
             </div>
             <div className="value_card">
-              <p className="value_card_p">R$</p><span>{totalIncome - totalExit}</span>
+              <p className="value_card_p">R$</p><span>{totalBalance }</span>
             </div>  
           </div> 
         </section>

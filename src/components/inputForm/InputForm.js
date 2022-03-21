@@ -15,10 +15,9 @@ function InputForm(){
     inputValue: 0,
   });
 
-  const { inputTitle, inputCategory, inputType, inputValue, } = income;
+  const { inputTitle, inputCategory, inputType, inputValue } = income;
 
   const onChangeIncome = (e) => {
-    console.log("AQUI",e.target.value)
     setIncome({ ...income, [e.target.name]: e.target.value });
   };
 
@@ -39,7 +38,7 @@ function InputForm(){
       setIncome({
         inputTitle: "",
         inputCategory: "",
-        inputType: "",
+        inputType: true,
         inputValue: 0,
       });
     }
@@ -49,27 +48,27 @@ function InputForm(){
     <form onSubmit={onSubmitIncome}>
       <div className={styles.input_group}>
 
-      <input type="text" name="inputTitle" value={inputTitle} placeholder="Título" autoComplete="off" onChange={onChangeIncome}/>
+      <input type="text" name="inputTitle" value={inputTitle} placeholder="Título" autoComplete="off" onChange={onChangeIncome} required/>
 
       <div className={styles.div_radio_type}>
         <div className={styles.div_option_input}>
-          <input type="radio" name="inputType" value="input" autoComplete="off" onChange={onChangeIncome}/> Entrada
+          <input type="radio" name="inputType" value="input" autoComplete="off" default onChange={onChangeIncome}/> Entrada
         </div>
         <div className={styles.div_option_output}>
-        <input type="radio" name="inputType" value="output" autoComplete="off" onChange={onChangeIncome}/> Saida
+        <input type="radio" name="inputType" value="output" autoComplete="off" default onChange={onChangeIncome}/> Saida
         </div>
       </div>
       
-      <input type="text" name="inputCategory" value={inputCategory} placeholder="Categoria" autoComplete="off" onChange={onChangeIncome}/>
+      <input type="text" name="inputCategory" value={inputCategory} placeholder="Categoria" autoComplete="off" onChange={onChangeIncome} required/>
 
-      <input type="number" name="inputValue" value={inputValue} autoComplete="off" onChange={onChangeIncome}/>
+      <input type="number" name="inputValue" value={inputValue} autoComplete="off" onChange={onChangeIncome} required/>
 
       <div className={styles.option_form_register}>
         <div className={styles.option_form_submit}>
-          <input type="submit" value="Cadastrar"/>
+          <input type="submit" value="Cadastrar"/> 
         </div>        
         <div className={styles.option_form_exit}>
-          <NavLink className={({isActive}) => (isActive ? styles.active : '')} to='/'>            
+          <NavLink to='/'>            
             <input type="submit" value="Cancelar"/>
           </NavLink>
         </div>

@@ -14,12 +14,9 @@ export default (state, action) => {
       };
     case "EDIT_TRANSACTION":
       const registers = state.incomeTransactions
-      console.log(registers)
       const registerIndex = registers.findIndex((reg => reg.id === action.payload.id))
-      console.log(action.payload.id)
       registers[registerIndex] = action.payload;
 
-      console.log(registerIndex)
       return {
         ...state,
           incomeTransactions: registers,

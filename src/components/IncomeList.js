@@ -7,40 +7,33 @@ import "./table.css"
 
 const IncomeList = () => {
   
-  const { incomeTransactions} = useContext(GlobalContext);
-
-  console.log(incomeTransactions.map(incomeTransaction => (
-    
-      console.log(incomeTransaction.inputTitle === "asdfsaf"))
-  ))
+  const { incomeTransactions } = useContext(GlobalContext);
 
   const [valueSearch, setValueSearch] = useState({
     searchTable: "",
+    select: "",
   });
 
-  const onChangeIncome = (e) => {
+  const onChangeFilter = (e) => {
     
     setValueSearch({ ...valueSearch, [e.target.name]: e.target.value });
   };
 
-  const { searchTable } = valueSearch;
+  const { searchTable, select } = valueSearch;
   
-  // const onSubmitSearch = (e) =>{
-  //   // e.preventDefault();
+  // retorna o tipo de tabela all, entrada ou saida
+  const filterTable = valueSearch.select === "" || valueSearch.select === 'all'? 
+  incomeTransactions 
+  : incomeTransactions.filter(incomeTransactions => incomeTransactions.inputType === valueSearch.select);
 
-  //   if (searchTable !== ""){
-  //     const SearchTrasaction = {
-  //       valueSearch,
-  //     }
-      
-  //     console.log(SearchTrasaction)
-
-  //     SearchTrasactionTable(SearchTrasaction)
-    
-  //   }
-
-
-  // }
+  console.log(incomeTransactions)
+  // filtra tabela pelo campo pesquisar
+  const typeTable = valueSearch.searchTable != "" ? 
+  filterTable.filter(filterTable => filterTable.inputTitle.includes(valueSearch.searchTable) 
+    || filterTable.inputCategory.includes(valueSearch.searchTable)
+    || filterTable.date.includes(valueSearch.searchTable)
+    || filterTable.typeInput.includes(valueSearch.searchTable)) 
+    : filterTable
 
   return (
     <div className="div_table_input">
@@ -67,17 +60,17 @@ const IncomeList = () => {
               </div>
             </section>
             <section className="section_select_filter_input_output">
-              <select name="select" className="style_select_table">
-                <option value="default" selected></option>
-                <option value="filterInput">Entrada</option>
-                <option value="filterOutput">Saida</option>
+              <select name="select" className="style_select_table" onChange={onChangeFilter}>
+                <option value="all" selected></option>
+                <option name="filterInput" value="input">Entrada</option>
+                <option name="filterOutput" value="output">Saida</option>
               </select>
             </section>
           </div>
         </section>
         <div className="navbar_table">
           <div>
-            <input type="text" id="search" name="searchTable" value={searchTable} placeholder="Pesquisar" autoComplete="off" onChange={onChangeIncome}/>
+            <input type="text" id="search" name="searchTable" placeholder="Pesquisar" autoComplete="off" onChange={onChangeFilter}/>
           </div>
           <div className="div_button_register_table">
             <NavLink  className={({isActive}) => (isActive ? styles.active : '')} to='/formEntrada' >
@@ -86,22 +79,26 @@ const IncomeList = () => {
           </div>
         </div>
       </div>
-      <table id="customers" className="custonInput">
-        <tr>
-          <td>Titulo</td>
-          <td>Categoria</td>
-          <td>Valor</td>
-          <td>Data</td>
-          <td>Editar / Excluir</td>
-        </tr>
+        <table id="customers" className="custonInput">
+          <tr>
+            <td>Titulo</td>
+            <td>Categoria</td>
+            <td>Valor</td>
+            <td>Data</td>
+            <td>Editar / Excluir</td>
+          </tr>
 
-        {incomeTransactions.map(incomeTransaction => (
-            <IncomeTransaction
-              key={incomeTransaction.id}
-              incomeTransaction={incomeTransaction}
-            />
-          ))}     
-      </table>
+          {
+            
+            typeTable.map(table => (
+                  <IncomeTransaction
+                    key={table.id}
+                    incomeTransaction={table}
+                  />
+                ))
+            
+            }     
+        </table>
     </div>
   );
 };
