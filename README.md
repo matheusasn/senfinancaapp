@@ -1,4 +1,4 @@
-Todos os bugs removidos depois do prazo de entrega, subindo depois da avaliação da SenseData.
+Bug na tela de cadastro removido, subindo depois da avaliação da SenseData.
 
 Senfinanca: http://senfinanca-app.herokuapp.com/
 
