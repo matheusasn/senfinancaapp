@@ -38,7 +38,7 @@ function InputForm(){
       setIncome({
         inputTitle: "",
         inputCategory: "",
-        inputType: true,
+        inputType: "",
         inputValue: 0,
       });
     }
@@ -52,10 +52,10 @@ function InputForm(){
 
       <div className={styles.div_radio_type}>
         <div className={styles.div_option_input}>
-          <input type="radio" name="inputType" value="input" autoComplete="off" default onChange={onChangeIncome}/> Entrada
+          <input type="radio" name="inputType" value="input" autoComplete="off" onChange={onChangeIncome}/> Entrada
         </div>
         <div className={styles.div_option_output}>
-        <input type="radio" name="inputType" value="output" autoComplete="off" default onChange={onChangeIncome}/> Saida
+        <input type="radio" name="outputType" value="output" autoComplete="off" onChange={onChangeIncome}/> Saida
         </div>
       </div>
       
