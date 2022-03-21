@@ -33,13 +33,6 @@ export const GlobalContextProvider = ({ children }) => {
     });
   };
 
-  // const SearchTrasactionTable = valueSearchTrasactionTable => {
-  //   dispatch({
-  //     type: "SEARCH_VALUE",
-  //     payload: valueSearchTrasactionTable
-  //   });
-  // } 
-
   const addIncome = incomeTransaction => {
     dispatch({
       type: "ADD_INCOME",
