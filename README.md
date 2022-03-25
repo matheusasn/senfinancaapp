@@ -1,5 +1,3 @@
-Subir nova versão depois da avaliação da SenseData, prazo de entrega finalizado
-
 Senfinanca: http://senfinanca-app.herokuapp.com/
 
 # Getting Started with Create React App
